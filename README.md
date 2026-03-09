@@ -75,7 +75,7 @@ Acesse: `http://localhost:5173`
 
 O projeto está hospedado na **Vercel** com deploy automático a cada `git push` na branch `main`.
 
-🔗 **Acesse o jogo:** [escudo-digital.vercel.app]([(https://escudo-digital-ruddy.vercel.app/))
+🔗 **Acesse o jogo:** [escudo-digital-ruddy.vercel.app]([(https://escudo-digital-ruddy.vercel.app/))
 
 ---
 
