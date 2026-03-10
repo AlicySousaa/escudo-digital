@@ -204,7 +204,7 @@ export default function EscudoDigital() {
     </div>
   );
 
-  // ── GAME OVER ──
+ 
   if (screen === "gameover") return (
     <div style={{ minHeight: "100vh", background: "linear-gradient(135deg, #1a0000, #3d0000)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Georgia, serif", padding: 20 }}>
       <div style={{ maxWidth: 440, width: "100%", textAlign: "center" }}>
@@ -219,7 +219,7 @@ export default function EscudoDigital() {
     </div>
   );
 
-  // ── RESULT ──
+ 
   if (screen === "result") {
     const pct = Math.round((history.filter(h => h.correct).length / scenarios.length) * 100);
     const medal = pct === 100 ? "🥇" : pct >= 75 ? "🥈" : pct >= 50 ? "🥉" : "📚";
@@ -259,14 +259,11 @@ export default function EscudoDigital() {
     );
   }
 
-  // ── GAME ──
   const bgAnswer = !answered ? "transparent" : showExplanation && selectedAnswer === current.isScam ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.08)";
 
   return (
     <div style={{ minHeight: "100vh", background: "linear-gradient(160deg, #0f172a 0%, #1e3a5f 100%)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Georgia, serif", padding: "16px" }}>
       <div style={{ maxWidth: 480, width: "100%", animation: shake ? "shake 0.4s ease" : pulse ? "pulseGreen 0.4s ease" : "none" }}>
-
-        {/* HUD */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
           <div style={{ display: "flex", gap: 4 }}>
             {Array.from({ length: 3 }).map((_, i) => <span key={i} style={{ fontSize: 22, filter: i < lives ? "none" : "grayscale(1) opacity(0.3)" }}>❤️</span>)}
@@ -276,8 +273,6 @@ export default function EscudoDigital() {
           </div>
           <div style={{ color: "#94a3b8", fontSize: 14 }}>{currentIndex + 1} / {scenarios.length}</div>
         </div>
-
-        {/* Timer */}
         <div style={{ background: "rgba(255,255,255,0.06)", borderRadius: 8, height: 8, marginBottom: 20, overflow: "hidden" }}>
           <div style={{ height: "100%", width: `${timerPct}%`, background: timerColor, borderRadius: 8, transition: "width 1s linear, background 0.3s" }} />
         </div>
@@ -285,10 +280,7 @@ export default function EscudoDigital() {
           <span style={{ color: timerColor, fontSize: 13, fontWeight: 700 }}>⏱️ {timeLeft}s</span>
           {combo >= 2 && <span style={{ color: "#f59e0b", fontSize: 13, marginLeft: 12 }}>🔥 Combo x{combo}!</span>}
         </div>
-
-        {/* Card da mensagem */}
         <div style={{ background: bgAnswer || "rgba(255,255,255,0.04)", borderRadius: 20, border: "1px solid rgba(255,255,255,0.1)", overflow: "hidden", marginBottom: 16, transition: "background 0.3s" }}>
-          {/* Header */}
           <div style={{ background: "rgba(255,255,255,0.06)", padding: "14px 20px", display: "flex", alignItems: "center", gap: 12, borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
             <div style={{ width: 44, height: 44, background: "rgba(255,255,255,0.1)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>{current.avatar}</div>
             <div>
@@ -297,13 +289,9 @@ export default function EscudoDigital() {
             </div>
             <div style={{ marginLeft: "auto", background: "rgba(255,255,255,0.08)", borderRadius: 20, padding: "4px 12px", fontSize: 12, color: "#93c5fd" }}>{current.category}</div>
           </div>
-
-          {/* Mensagem */}
           <div style={{ padding: "20px 20px 16px" }}>
             <p style={{ color: "#e2e8f0", fontSize: 16, lineHeight: 1.7, margin: 0, fontStyle: current.type === "ligacao" ? "italic" : "normal" }}>{current.message}</p>
           </div>
-
-          {/* Explicação */}
           {showExplanation && (
             <div style={{ margin: "0 16px 16px", background: current.isScam ? "rgba(239,68,68,0.12)" : "rgba(34,197,94,0.12)", borderRadius: 12, padding: 16, border: `1px solid ${current.isScam ? "rgba(239,68,68,0.3)" : "rgba(34,197,94,0.3)"}` }}>
               <p style={{ margin: "0 0 8px", color: current.isScam ? "#fca5a5" : "#86efac", fontWeight: 700, fontSize: 15 }}>
@@ -314,8 +302,6 @@ export default function EscudoDigital() {
             </div>
           )}
         </div>
-
-        {/* Botões */}
         {!answered ? (
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             <button onClick={() => handleAnswer(true)} style={{ padding: "18px", background: "linear-gradient(135deg, #dc2626, #b91c1c)", color: "#fff", border: "none", borderRadius: 14, fontSize: 17, fontWeight: 800, cursor: "pointer", fontFamily: "Georgia, serif", boxShadow: "0 4px 20px rgba(220,38,38,0.3)" }}>
