@@ -13,7 +13,7 @@
 
 O **Escudo Digital** é um projeto de extensão universitária desenvolvido durante a graduação em **Análise e Desenvolvimento de Sistemas**, com foco em combater golpes digitais por meio da educação e do engajamento.
 
-O projeto será aplicado em escola pública com alunos do **Ensino Fundamental e Médio**, com faixa etária entre 11 e 16 anos, um público altamente conectado e cada vez mais exposto a golpes digitais, desinformação e situações de risco na internet.
+O projeto será aplicado em escolas com alunos do **Ensino Fundamental e Médio**, com faixa etária entre 11 e 16 anos, um público altamente conectado e cada vez mais exposto a golpes digitais, desinformação e situações de risco na internet.
 
 A iniciativa é embasada na **Lei nº 15.211/2025 (Lei Felca)**, o ECA Digital, que entrou em vigor em março de 2026 e reforça a necessidade de proteção digital de crianças e adolescentes no Brasil.
 
